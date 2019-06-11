@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# training
+./darknet detector train alprv3/obj.data alprv3/yolov3.cfg alprv3/darknet53.conv.74
+# resume trainig
+./darknet detector train alprv3/obj.data alprv3/yolov3.cfg alprv3/weights/yolov3.backup
+
+
+
+# testing
+./darknet detect alprv3/yolov3.cfg alprv3/weights/yolov3_1000.weights alprv3/images/38.jpg
+
+
